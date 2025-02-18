@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: laravel-vue-practice
+    env: php
+    plan: free
+    buildCommand: |
+      composer install
+      npm install
+    startCommand: php artisan serve --host=0.0.0.0 --port=80
+    branches:
+      - main
